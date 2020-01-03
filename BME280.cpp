@@ -14,10 +14,10 @@ BlueDot_BME280::BlueDot_BME280()
   parameter.communication = 0;
   parameter.I2CAddress = 0x76;
   parameter.sensorMode = 0b01; // was 0b11, this is for sleep
-  parameter.IIRfilter = 0b100;
-  parameter.tempOversampling = 0b101;
-  parameter.pressOversampling = 0b101;
-  parameter.humidOversampling = 0b101;
+  parameter.IIRfilter = 0b000; // was 0b100;
+  parameter.tempOversampling = 0b001; // was 0b101
+  parameter.pressOversampling = 0b001; // was 0b101
+  parameter.humidOversampling = 0b001; // was 0b101
   parameter.pressureSeaLevel = 1013.25;
   parameter.tempOutsideCelsius = 21;
   parameter.tempOutsideFahrenheit = 999;

@@ -125,7 +125,7 @@ void measureAndSend() {
   
   // go to sleep
   rf95.sleep();
-  delay(500);
+  delay(200);
   scheduler.scheduleDelayed(measureAndSend, 600000L);
 }
 
@@ -196,13 +196,13 @@ long readVcc() {
 
 
 void read_bme() {
-  delay(100);
+  delay(50);
   pressure = (float) (bme.readPressure());
-  delay(100);
+  delay(20);
   humidity = (float) (bme.readHumidity());
-  delay(100);
+  delay(20);
   temperature = (float) bme.readTempC();
-  delay(100);
+  delay(20);
 }
 
 void loop()
